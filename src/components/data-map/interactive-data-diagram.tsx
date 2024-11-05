@@ -150,45 +150,45 @@ interface DiagramNodeProps {
 const InteractiveDataDiagram = () => {
     const [nodes, setNodes] = useState([
       // Center node
-      { id: 'main', x: 400, y: 300, text: 'MY DATA', isMain: true },
+      { id: 'main', x: 550, y: 300, text: 'MY DATA', isMain: true },
       
       // Primary categories
-      { id: 'bio', x: 200, y: 200, text: 'Biometric Data', isMain: true },
-      { id: 'health', x: 300, y: 400, text: 'Health Data', isMain: true },
-      { id: 'financial', x: 600, y: 200, text: 'Financial Data', isMain: true },
-      { id: 'digital', x: 500, y: 400, text: 'Digital Data', isMain: true },
-      { id: 'professional', x: 200, y: 300, text: 'Professional', isMain: true },
-      { id: 'personal', x: 600, y: 300, text: 'Personal Info', isMain: true },
+      { id: 'bio', x: 300, y: 200, text: 'Biometric Data', isMain: true },
+      { id: 'health', x: 400, y: 400, text: 'Health Data', isMain: true },
+      { id: 'financial', x: 700, y: 200, text: 'Financial Data', isMain: true },
+      { id: 'digital', x: 600, y: 400, text: 'Digital Data', isMain: true },
+      { id: 'professional', x: 350, y: 300, text: 'Professional', isMain: true },
+      { id: 'personal', x: 700, y: 300, text: 'Personal Info', isMain: true },
       
       // Biometric subcategories
-      { id: 'height', x: 100, y: 150, text: 'Height: 5\'8"' },
-      { id: 'weight', x: 200, y: 150, text: 'Weight' },
-      { id: 'dna', x: 150, y: 250, text: 'DNA Profile' },
+      { id: 'height', x: 250, y: 150, text: 'Height: 5\'8"' },
+      { id: 'weight', x: 400, y: 150, text: 'Weight' },
+      { id: 'dna', x: 250, y: 250, text: 'DNA Profile' },
       
       // Health subcategories
-      { id: 'medical', x: 250, y: 450, text: 'Medical History' },
-      { id: 'fitness', x: 350, y: 450, text: 'Fitness Data' },
-      { id: 'allergies', x: 300, y: 500, text: 'Allergies' },
+      { id: 'medical', x: 450, y: 450, text: 'Medical History' },
+      { id: 'fitness', x: 300, y: 450, text: 'Fitness Data' },
+      { id: 'allergies', x: 400, y: 500, text: 'Allergies' },
       
       // Financial subcategories
-      { id: 'bank', x: 700, y: 150, text: 'Bank Accounts' },
-      { id: 'invest', x: 650, y: 250, text: 'Investments' },
-      { id: 'crypto', x: 750, y: 200, text: 'Crypto Assets' },
+      { id: 'bank', x: 800, y: 150, text: 'Bank Accounts' },
+      { id: 'invest', x: 750, y: 250, text: 'Investments' },
+      { id: 'crypto', x: 850, y: 200, text: 'Crypto Assets' },
       
       // Digital subcategories
-      { id: 'social', x: 500, y: 450, text: 'Social Media' },
-      { id: 'email', x: 600, y: 450, text: 'Email Accounts' },
-      { id: 'devices', x: 550, y: 500, text: 'Devices' },
+      { id: 'social', x: 600, y: 450, text: 'Social Media' },
+      { id: 'email', x: 800, y: 450, text: 'Email Accounts' },
+      { id: 'devices', x: 650, y: 500, text: 'Devices' },
       
       // Professional subcategories
-      { id: 'education', x: 100, y: 300, text: 'Education' },
-      { id: 'work', x: 150, y: 350, text: 'Work History' },
-      { id: 'skills', x: 100, y: 400, text: 'Skills' },
+      { id: 'education', x: 200, y: 300, text: 'Education' },
+      { id: 'work', x: 250, y: 350, text: 'Work History' },
+      { id: 'skills', x: 200, y: 400, text: 'Skills' },
       
       // Personal subcategories
-      { id: 'identity', x: 700, y: 300, text: 'Identity Docs' },
-      { id: 'contact', x: 650, y: 350, text: 'Contact Info' },
-      { id: 'family', x: 700, y: 400, text: 'Family Data' }
+      { id: 'identity', x: 900, y: 300, text: 'Identity Docs' },
+      { id: 'contact', x: 750, y: 350, text: 'Contact Info' },
+      { id: 'family', x: 800, y: 400, text: 'Family Data' }
     ]);
     
     const [connections, setConnections] = useState([
