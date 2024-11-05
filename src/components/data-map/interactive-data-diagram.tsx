@@ -385,7 +385,7 @@ const InteractiveDataDiagram = () => {
     return (
         <div className="max-w-6xl mx-auto p-8 font-mono">
           <h1 className="text-3xl font-bold text-center mb-6" style={{ fontFamily: 'Courier New' }}>
-            My Personal Data Map
+            My Data or Your Data ?
           </h1>
           <div className="text-center mb-8">
             <p className="text-gray-600 mb-4">Map and organize your personal data categories</p>
