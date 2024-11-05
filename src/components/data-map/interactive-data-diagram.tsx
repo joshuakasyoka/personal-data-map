@@ -97,7 +97,7 @@ interface DiagramNodeProps {
             onDragEnd();
           }
         }}
-        style={{ cursor: 'move' }}
+        style={{ cursor: 'point' }}
       >
         <rect
           x={rectX}
@@ -346,6 +346,7 @@ const InteractiveDataDiagram = () => {
         setNodes(nodes.map(node => 
           node.id === id ? { ...node, text: newText } : node
         ));
+        setEditingId(null);
       };
   
     const handleDeleteConnection = (from: string, to: string) => {
@@ -365,7 +366,7 @@ const InteractiveDataDiagram = () => {
         titleText.setAttribute("text-anchor", "middle");
         titleText.setAttribute("font-family", "Courier New");
         titleText.setAttribute("font-size", "24px");
-        titleText.textContent = "My Personal Data Map";
+        titleText.textContent = "My Data";
         svgCopy.insertBefore(titleText, svgCopy.firstChild);
   
         // Convert to string and download
@@ -375,7 +376,7 @@ const InteractiveDataDiagram = () => {
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.download = 'personal-data-map.svg';
+        link.download = 'my-data.svg';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -391,7 +392,7 @@ const InteractiveDataDiagram = () => {
           <div className="text-center mb-8">
             <p className="text-gray-600 mb-4">Map and organize your personal data categories</p>
             <div className="flex justify-center gap-4">
-              <Button onClick={() => addNode(true)} variant="outline" className="font-mono">
+              <Button onClick={() => addNode(true)} variant="default" className="font-mono">
                 <PlusCircle className="mr-2 h-4 w-4" />
                 Add Primary Node
               </Button>
