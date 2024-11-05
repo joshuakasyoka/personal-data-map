@@ -62,10 +62,10 @@ interface DiagramNodeProps {
   }
 
   const DiagramNode = ({ id, x, y, text, isEditing, onEdit, onDragStart, onDragEnd, onClick, isMain = false, onConnectionStart, onConnectionEnd }: DiagramNodeProps) => {
-    const [width, setWidth] = useState(100);
+    const [width, setWidth] = useState(100); // Start with a default width
     const textElementRef = useRef<SVGTextElement | null>(null);
     
-    // Calculate text width when text changes
+    // Adjust node width based on text length
     useEffect(() => {
       if (textElementRef.current) {
         const textWidth = textElementRef.current.getComputedTextLength();
@@ -145,12 +145,13 @@ interface DiagramNodeProps {
         )}
       </g>
     );
-  };
+};
+
 
 const InteractiveDataDiagram = () => {
     const [nodes, setNodes] = useState([
       // Center node
-      { id: 'main', x: 550, y: 300, text: 'MY DATA', isMain: true },
+      { id: 'main', x: 545, y: 50, text: 'MY DATA', isMain: true },
       
       // Primary categories
       { id: 'bio', x: 300, y: 200, text: 'Biometric Data', isMain: true },
@@ -384,7 +385,7 @@ const InteractiveDataDiagram = () => {
   
     return (
         <div className="max-w-6xl mx-auto p-8 font-mono">
-          <h1 className="text-3xl font-bold text-center mb-6" style={{ fontFamily: 'Courier New' }}>
+          <h1 className="text-3xl text-center mb-6" style={{ fontFamily: 'Courier New' }}>
             My Data or Your Data ?
           </h1>
           <div className="text-center mb-8">
