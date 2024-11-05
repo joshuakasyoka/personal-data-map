@@ -391,7 +391,7 @@ const InteractiveDataDiagram = () => {
           <div className="text-center mb-8">
             <p className="text-gray-600 mb-4">Map and organize your personal data categories</p>
             <div className="flex justify-center gap-4">
-              <Button onClick={() => addNode(true)} variant="default" className="font-mono">
+              <Button onClick={() => addNode(true)} variant="outline" className="font-mono">
                 <PlusCircle className="mr-2 h-4 w-4" />
                 Add Primary Node
               </Button>
